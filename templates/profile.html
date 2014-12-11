@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+
+ {% for user in userList %}
+   
+   <div>
+   		<h3>{{ user.userName }}</h3>
+   </div>
+   <div>
+   		{{ user.userEmail }}
+   </div>
+   <div>
+   		{{ user.userPhone }}
+   </div>
+   <hr>
+  
+  {% else %}
+   <div>
+		No users
+   </div>
+  {% endfor %}
+{% endblock %}
